@@ -101,6 +101,9 @@
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.SeaShell;
             this.splitContainer1.Panel1.Controls.Add(this.link_QLLH);
             this.splitContainer1.Panel1.Controls.Add(this.link_QLSV);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_Xoa);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_them);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_Sua);
             // 
             // splitContainer1.Panel2
             // 
@@ -116,7 +119,7 @@
             this.link_QLLH.LinkArea = new System.Windows.Forms.LinkArea(0, 15);
             this.link_QLLH.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.link_QLLH.LinkColor = System.Drawing.Color.Black;
-            this.link_QLLH.Location = new System.Drawing.Point(0, 28);
+            this.link_QLLH.Location = new System.Drawing.Point(0, 52);
             this.link_QLLH.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.link_QLLH.Name = "link_QLLH";
             this.link_QLLH.Size = new System.Drawing.Size(203, 24);
@@ -157,9 +160,6 @@
             this.pnl_function.BackColor = System.Drawing.SystemColors.MenuBar;
             this.pnl_function.Controls.Add(this.txt_SearchSV);
             this.pnl_function.Controls.Add(this.ptb_Search);
-            this.pnl_function.Controls.Add(this.btn_Xoa);
-            this.pnl_function.Controls.Add(this.btn_Sua);
-            this.pnl_function.Controls.Add(this.btn_them);
             this.pnl_function.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_function.Location = new System.Drawing.Point(0, 0);
             this.pnl_function.Name = "pnl_function";
@@ -171,7 +171,7 @@
             this.txt_SearchSV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_SearchSV.Location = new System.Drawing.Point(17, 12);
+            this.txt_SearchSV.Location = new System.Drawing.Point(128, 12);
             this.txt_SearchSV.Margin = new System.Windows.Forms.Padding(0);
             this.txt_SearchSV.Name = "txt_SearchSV";
             this.txt_SearchSV.Size = new System.Drawing.Size(267, 26);
@@ -183,7 +183,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.ptb_Search.BackColor = System.Drawing.Color.Transparent;
             this.ptb_Search.Image = global::WindowsFormsApp1.Properties.Resources.loupe;
-            this.ptb_Search.Location = new System.Drawing.Point(284, 12);
+            this.ptb_Search.Location = new System.Drawing.Point(412, 8);
             this.ptb_Search.Margin = new System.Windows.Forms.Padding(0);
             this.ptb_Search.Name = "ptb_Search";
             this.ptb_Search.Size = new System.Drawing.Size(51, 30);
@@ -195,7 +195,7 @@
             // 
             this.btn_Xoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Xoa.Location = new System.Drawing.Point(522, 10);
+            this.btn_Xoa.Location = new System.Drawing.Point(63, 332);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(59, 30);
             this.btn_Xoa.TabIndex = 3;
@@ -206,7 +206,7 @@
             // 
             this.btn_Sua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Sua.Location = new System.Drawing.Point(457, 10);
+            this.btn_Sua.Location = new System.Drawing.Point(107, 285);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(59, 30);
             this.btn_Sua.TabIndex = 2;
@@ -217,7 +217,7 @@
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_them.Location = new System.Drawing.Point(383, 10);
+            this.btn_them.Location = new System.Drawing.Point(12, 285);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(68, 30);
             this.btn_them.TabIndex = 1;

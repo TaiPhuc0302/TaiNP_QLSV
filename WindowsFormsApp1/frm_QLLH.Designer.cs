@@ -35,12 +35,12 @@
             this.dgv_DSLH = new System.Windows.Forms.DataGridView();
             this.pnl_function = new System.Windows.Forms.Panel();
             this.txt_SearchSV = new System.Windows.Forms.TextBox();
+            this.ptb_Search = new System.Windows.Forms.PictureBox();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.pnl_topBar = new System.Windows.Forms.Panel();
             this.link_Home = new System.Windows.Forms.LinkLabel();
-            this.ptb_Search = new System.Windows.Forms.PictureBox();
             this.ptb_avatar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -48,8 +48,8 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSLH)).BeginInit();
             this.pnl_function.SuspendLayout();
-            this.pnl_topBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Search)).BeginInit();
+            this.pnl_topBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_avatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +64,9 @@
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.SeaShell;
             this.splitContainer1.Panel1.Controls.Add(this.link_QLLH);
             this.splitContainer1.Panel1.Controls.Add(this.link_QLSV);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_Xoa);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_them);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_Sua);
             // 
             // splitContainer1.Panel2
             // 
@@ -79,7 +82,7 @@
             this.link_QLLH.LinkArea = new System.Windows.Forms.LinkArea(0, 15);
             this.link_QLLH.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.link_QLLH.LinkColor = System.Drawing.Color.Black;
-            this.link_QLLH.Location = new System.Drawing.Point(0, 27);
+            this.link_QLLH.Location = new System.Drawing.Point(0, 52);
             this.link_QLLH.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.link_QLLH.Name = "link_QLLH";
             this.link_QLLH.Size = new System.Drawing.Size(203, 25);
@@ -107,7 +110,7 @@
             // 
             this.dgv_DSLH.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv_DSLH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DSLH.Location = new System.Drawing.Point(0, 52);
+            this.dgv_DSLH.Location = new System.Drawing.Point(4, 58);
             this.dgv_DSLH.Name = "dgv_DSLH";
             this.dgv_DSLH.RowHeadersWidth = 62;
             this.dgv_DSLH.RowTemplate.Height = 28;
@@ -119,9 +122,6 @@
             this.pnl_function.BackColor = System.Drawing.SystemColors.MenuBar;
             this.pnl_function.Controls.Add(this.txt_SearchSV);
             this.pnl_function.Controls.Add(this.ptb_Search);
-            this.pnl_function.Controls.Add(this.btn_Xoa);
-            this.pnl_function.Controls.Add(this.btn_Sua);
-            this.pnl_function.Controls.Add(this.btn_them);
             this.pnl_function.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_function.Location = new System.Drawing.Point(0, 0);
             this.pnl_function.Name = "pnl_function";
@@ -133,17 +133,31 @@
             this.txt_SearchSV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_SearchSV.Location = new System.Drawing.Point(17, 12);
+            this.txt_SearchSV.Location = new System.Drawing.Point(130, 16);
             this.txt_SearchSV.Margin = new System.Windows.Forms.Padding(0);
             this.txt_SearchSV.Name = "txt_SearchSV";
             this.txt_SearchSV.Size = new System.Drawing.Size(267, 26);
             this.txt_SearchSV.TabIndex = 0;
             // 
+            // ptb_Search
+            // 
+            this.ptb_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.ptb_Search.BackColor = System.Drawing.Color.Transparent;
+            this.ptb_Search.Image = global::WindowsFormsApp1.Properties.Resources.loupe;
+            this.ptb_Search.Location = new System.Drawing.Point(427, 12);
+            this.ptb_Search.Margin = new System.Windows.Forms.Padding(0);
+            this.ptb_Search.Name = "ptb_Search";
+            this.ptb_Search.Size = new System.Drawing.Size(51, 30);
+            this.ptb_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_Search.TabIndex = 0;
+            this.ptb_Search.TabStop = false;
+            // 
             // btn_Xoa
             // 
             this.btn_Xoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Xoa.Location = new System.Drawing.Point(522, 10);
+            this.btn_Xoa.Location = new System.Drawing.Point(59, 336);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(59, 30);
             this.btn_Xoa.TabIndex = 3;
@@ -154,7 +168,7 @@
             // 
             this.btn_Sua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Sua.Location = new System.Drawing.Point(457, 10);
+            this.btn_Sua.Location = new System.Drawing.Point(107, 291);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(59, 30);
             this.btn_Sua.TabIndex = 2;
@@ -165,7 +179,7 @@
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_them.Location = new System.Drawing.Point(384, 10);
+            this.btn_them.Location = new System.Drawing.Point(12, 291);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(67, 30);
             this.btn_them.TabIndex = 1;
@@ -199,20 +213,6 @@
             this.link_Home.Text = "Trang chủ";
             this.link_Home.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_Home_LinkClicked);
             // 
-            // ptb_Search
-            // 
-            this.ptb_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.ptb_Search.BackColor = System.Drawing.Color.Transparent;
-            this.ptb_Search.Image = global::WindowsFormsApp1.Properties.Resources.loupe;
-            this.ptb_Search.Location = new System.Drawing.Point(284, 12);
-            this.ptb_Search.Margin = new System.Windows.Forms.Padding(0);
-            this.ptb_Search.Name = "ptb_Search";
-            this.ptb_Search.Size = new System.Drawing.Size(51, 30);
-            this.ptb_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptb_Search.TabIndex = 0;
-            this.ptb_Search.TabStop = false;
-            // 
             // ptb_avatar
             // 
             this.ptb_avatar.Image = ((System.Drawing.Image)(resources.GetObject("ptb_avatar.Image")));
@@ -239,9 +239,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSLH)).EndInit();
             this.pnl_function.ResumeLayout(false);
             this.pnl_function.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Search)).EndInit();
             this.pnl_topBar.ResumeLayout(false);
             this.pnl_topBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_Search)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_avatar)).EndInit();
             this.ResumeLayout(false);
 
