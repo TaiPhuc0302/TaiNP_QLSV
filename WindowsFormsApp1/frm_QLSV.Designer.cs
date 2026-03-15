@@ -94,7 +94,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -115,7 +115,7 @@
             // 
             this.btn_them.BackColor = System.Drawing.Color.Lime;
             this.btn_them.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_them.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_them.Location = new System.Drawing.Point(3, 3);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(135, 44);
@@ -162,7 +162,7 @@
             // 
             // cmb_Lop
             // 
-            this.cmb_Lop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmb_Lop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_Lop.FormattingEnabled = true;
             this.cmb_Lop.Location = new System.Drawing.Point(9, 389);
@@ -172,7 +172,7 @@
             // 
             // btn_QLLH
             // 
-            this.btn_QLLH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btn_QLLH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_QLLH.BackColor = System.Drawing.Color.DodgerBlue;
             this.btn_QLLH.Location = new System.Drawing.Point(9, 561);
@@ -185,7 +185,7 @@
             // 
             // cmb_gioitinh
             // 
-            this.cmb_gioitinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmb_gioitinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_gioitinh.FormattingEnabled = true;
             this.cmb_gioitinh.Location = new System.Drawing.Point(9, 308);
@@ -195,7 +195,7 @@
             // 
             // dt_ngaysinh
             // 
-            this.dt_ngaysinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dt_ngaysinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dt_ngaysinh.Location = new System.Drawing.Point(9, 231);
             this.dt_ngaysinh.MaxDate = new System.DateTime(2026, 3, 14, 0, 0, 0, 0);
@@ -203,10 +203,11 @@
             this.dt_ngaysinh.Size = new System.Drawing.Size(283, 26);
             this.dt_ngaysinh.TabIndex = 13;
             this.dt_ngaysinh.Value = new System.DateTime(2026, 3, 14, 0, 0, 0, 0);
+            this.dt_ngaysinh.ValueChanged += new System.EventHandler(this.dt_ngaysinh_ValueChanged);
             // 
             // txb_hoten
             // 
-            this.txb_hoten.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txb_hoten.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txb_hoten.Location = new System.Drawing.Point(9, 157);
             this.txb_hoten.Name = "txb_hoten";
@@ -215,7 +216,7 @@
             // 
             // txb_masv
             // 
-            this.txb_masv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txb_masv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txb_masv.Location = new System.Drawing.Point(9, 83);
             this.txb_masv.Name = "txb_masv";
@@ -293,6 +294,7 @@
             this.dgv_DSSV.RowTemplate.Height = 28;
             this.dgv_DSSV.Size = new System.Drawing.Size(588, 596);
             this.dgv_DSSV.TabIndex = 1;
+            this.dgv_DSSV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSSV_CellClick);
             // 
             // pnl_function
             // 
@@ -312,7 +314,6 @@
             this.txb_SearchSV.Name = "txb_SearchSV";
             this.txb_SearchSV.Size = new System.Drawing.Size(341, 26);
             this.txb_SearchSV.TabIndex = 0;
-            this.txb_SearchSV.Click += new System.EventHandler(this.ptb_Search_Click);
             // 
             // ptb_Search
             // 
@@ -325,6 +326,7 @@
             this.ptb_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptb_Search.TabIndex = 0;
             this.ptb_Search.TabStop = false;
+            this.ptb_Search.Click += new System.EventHandler(this.ptb_Search_Click);
             // 
             // frm_QLSV
             // 
@@ -334,6 +336,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "frm_QLSV";
             this.Text = "frm_QLSV";
+            this.Load += new System.EventHandler(this.frm_QLSV_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

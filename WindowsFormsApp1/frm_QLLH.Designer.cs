@@ -86,7 +86,7 @@
             // 
             // txb_siSo
             // 
-            this.txb_siSo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txb_siSo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txb_siSo.Location = new System.Drawing.Point(9, 229);
             this.txb_siSo.Name = "txb_siSo";
@@ -105,7 +105,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -126,14 +126,13 @@
             // 
             this.btn_them.BackColor = System.Drawing.Color.Lime;
             this.btn_them.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_them.Location = new System.Drawing.Point(3, 3);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(135, 44);
             this.btn_them.TabIndex = 1;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = false;
-            this.btn_them.Click += new System.EventHandler(this.btn_Them_Click);
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // btn_LamMoi
             // 
@@ -173,7 +172,7 @@
             // 
             // btn_QLSV
             // 
-            this.btn_QLSV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btn_QLSV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_QLSV.BackColor = System.Drawing.Color.DodgerBlue;
             this.btn_QLSV.Location = new System.Drawing.Point(9, 580);
@@ -182,10 +181,11 @@
             this.btn_QLSV.TabIndex = 16;
             this.btn_QLSV.Text = "Quản lý Sinh viên";
             this.btn_QLSV.UseVisualStyleBackColor = false;
+            this.btn_QLSV.Click += new System.EventHandler(this.btn_QLSV_Click);
             // 
             // txb_tenLop
             // 
-            this.txb_tenLop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txb_tenLop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txb_tenLop.Location = new System.Drawing.Point(9, 157);
             this.txb_tenLop.Name = "txb_tenLop";
@@ -194,7 +194,7 @@
             // 
             // txb_maLophoc
             // 
-            this.txb_maLophoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txb_maLophoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txb_maLophoc.Location = new System.Drawing.Point(9, 83);
             this.txb_maLophoc.Name = "txb_maLophoc";
@@ -230,7 +230,6 @@
             this.lbl_thongtinLop.Size = new System.Drawing.Size(174, 32);
             this.lbl_thongtinLop.TabIndex = 9;
             this.lbl_thongtinLop.Text = "Thông tin Lớp";
-            this.lbl_thongtinLop.Click += new System.EventHandler(this.lbl_thongtinLop_Click);
             // 
             // dgv_DSLH
             // 
@@ -243,6 +242,7 @@
             this.dgv_DSLH.RowTemplate.Height = 28;
             this.dgv_DSLH.Size = new System.Drawing.Size(617, 615);
             this.dgv_DSLH.TabIndex = 1;
+            this.dgv_DSLH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSLH_CellClick);
             // 
             // pnl_function
             // 
@@ -274,6 +274,7 @@
             this.ptb_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptb_Search.TabIndex = 0;
             this.ptb_Search.TabStop = false;
+            this.ptb_Search.Click += new System.EventHandler(this.ptb_Search_Click);
             // 
             // frm_QLLH
             // 
@@ -283,6 +284,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "frm_QLLH";
             this.Text = "frm_QLLH";
+            this.Load += new System.EventHandler(this.frm_QLLH_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
