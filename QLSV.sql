@@ -24,38 +24,39 @@ GO
 CREATE TABLE SinhVien (
     MaSV VARCHAR(20) PRIMARY KEY,
     TenSV NVARCHAR(100) NOT NULL,
+	GioiTinh NVARCHAR(10),
     NgaySinh DATE,
-    MaLop VARCHAR(20),
-    FOREIGN KEY (MaLop) REFERENCES LopHoc(MaLop)
+    Lop VARCHAR(20),
+    FOREIGN KEY (Lop) REFERENCES LopHoc(MaLop)
 );
 GO
 
 -- Dữ liệu
 INSERT INTO TaiKhoan (Username, Email, Password) 
 VALUES 
-('DatTT', 'dat@gmail.com', '4000568'),
-('admin1', 'admin1@gmail.com', '246810');
+('TaiNP', 'tai@gmail.com', '0024268'),
+('admin1', 'admin1@gmail.com', '123456');
 GO
 
 INSERT INTO LopHoc (MaLop, TenLop, SiSo)
 VALUES 
-('CNTT01', '68PM3', 30),
-('CNTT02', '68PM4', 20),
+('CNTT01', '68PM1', 30),
+('CNTT02', '68PM1', 20),
 ('MMT01', '69MH1', 20),
-('MMT02', '69MH3', 30),
-('CNTT03', '67PM2', 10);
+('MMT02', '69MH2', 30),
+('CNTT03', '67PM3', 10);
 GO
 
-INSERT INTO SinhVien (MaSV, TenSV, NgaySinh, MaLop)
+INSERT INTO SinhVien (MaSV, TenSV, GioiTinh, NgaySinh, Lop)
 VALUES 
-('123456', N'Nguyễn Văn Tuấn', '2003-05-15', 'CNTT01'),
-('246810', N'Trần Thị Mai', '2003-08-22', 'CNTT01'),
-('493723', N'Lê Hoàng Nam', '2004-01-10', 'CNTT01'),
-('284019', N'Phạm Văn Dũng', '2003-11-05', 'CNTT02'),
-('498571', N'Hoàng Thị Yến', '2004-02-28', 'CNTT02'),
-('091283', N'Đỗ Minh Trí', '2003-07-19', 'MMT01'),
-('123098', N'Vũ Bích Ngọc', '2003-12-01', 'MMT01'),
-('983742', N'Nguyễn Đức Huy', '2004-04-14', 'MMT02'),
-('232841', N'Trần Mai Linh', '2003-09-09', 'MMt02'),
-('502308', N'Lê Tuấn Khang', '2004-06-30', 'CNTT03');
+('123456', N'Nguyễn Văn Tuấn', N'Nam', '2003-05-15', 'CNTT01'),
+('246810', N'Trần Thị Mai', N'Nữ', '2003-08-22', 'CNTT01'),
+('493723', N'Lê Hoàng Nam', N'Nam', '2004-01-10', 'CNTT01'),
+('284019', N'Phạm Văn Dũng', N'Nam', '2003-11-05', 'CNTT02'),
+('498571', N'Hoàng Thị Yến', N'Nữ', '2004-02-28', 'CNTT02'),
+('091283', N'Đỗ Minh Trí', N'Nam', '2003-07-19', 'MMT01'),
+('123098', N'Vũ Bích Ngọc', N'Nữ', '2003-12-01', 'MMT01'),
+('983742', N'Nguyễn Đức Huy', N'Nam', '2004-04-14', 'MMT02'),
+('232841', N'Trần Mai Linh', N'Nữ', '2003-09-09', 'MMt02'),
+('502308', N'Lê Tuấn Khang', N'Nam', '2004-06-30', 'CNTT03');
 GO
