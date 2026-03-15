@@ -30,19 +30,19 @@ namespace WindowsFormsApp1
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertSinhVien(SinhVien instance);
+    partial void UpdateSinhVien(SinhVien instance);
+    partial void DeleteSinhVien(SinhVien instance);
     partial void InsertLopHoc(LopHoc instance);
     partial void UpdateLopHoc(LopHoc instance);
     partial void DeleteLopHoc(LopHoc instance);
     partial void InsertTaiKhoan(TaiKhoan instance);
     partial void UpdateTaiKhoan(TaiKhoan instance);
     partial void DeleteTaiKhoan(TaiKhoan instance);
-    partial void InsertSinhVien(SinhVien instance);
-    partial void UpdateSinhVien(SinhVien instance);
-    partial void DeleteSinhVien(SinhVien instance);
     #endregion
 		
 		public DataBaseDataContext() : 
-				base(global::WindowsFormsApp1.Properties.Settings.Default.QuanLySinhVienDBConnectionString, mappingSource)
+				base(global::WindowsFormsApp1.Properties.Settings.Default.QuanLySinhVienDBConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -71,6 +71,14 @@ namespace WindowsFormsApp1
 			OnCreated();
 		}
 		
+		public System.Data.Linq.Table<SinhVien> SinhViens
+		{
+			get
+			{
+				return this.GetTable<SinhVien>();
+			}
+		}
+		
 		public System.Data.Linq.Table<LopHoc> LopHocs
 		{
 			get
@@ -86,12 +94,203 @@ namespace WindowsFormsApp1
 				return this.GetTable<TaiKhoan>();
 			}
 		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SinhVien")]
+	public partial class SinhVien : INotifyPropertyChanging, INotifyPropertyChanged
+	{
 		
-		public System.Data.Linq.Table<SinhVien> SinhViens
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MaSV;
+		
+		private string _TenSV;
+		
+		private string _GioiTinh;
+		
+		private System.Nullable<System.DateTime> _NgaySinh;
+		
+		private string _Lop;
+		
+		private EntityRef<LopHoc> _LopHoc;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaSVChanging(string value);
+    partial void OnMaSVChanged();
+    partial void OnTenSVChanging(string value);
+    partial void OnTenSVChanged();
+    partial void OnGioiTinhChanging(string value);
+    partial void OnGioiTinhChanged();
+    partial void OnNgaySinhChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgaySinhChanged();
+    partial void OnLopChanging(string value);
+    partial void OnLopChanged();
+    #endregion
+		
+		public SinhVien()
+		{
+			this._LopHoc = default(EntityRef<LopHoc>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSV", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaSV
 		{
 			get
 			{
-				return this.GetTable<SinhVien>();
+				return this._MaSV;
+			}
+			set
+			{
+				if ((this._MaSV != value))
+				{
+					this.OnMaSVChanging(value);
+					this.SendPropertyChanging();
+					this._MaSV = value;
+					this.SendPropertyChanged("MaSV");
+					this.OnMaSVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSV", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string TenSV
+		{
+			get
+			{
+				return this._TenSV;
+			}
+			set
+			{
+				if ((this._TenSV != value))
+				{
+					this.OnTenSVChanging(value);
+					this.SendPropertyChanging();
+					this._TenSV = value;
+					this.SendPropertyChanged("TenSV");
+					this.OnTenSVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GioiTinh", DbType="NVarChar(10)")]
+		public string GioiTinh
+		{
+			get
+			{
+				return this._GioiTinh;
+			}
+			set
+			{
+				if ((this._GioiTinh != value))
+				{
+					this.OnGioiTinhChanging(value);
+					this.SendPropertyChanging();
+					this._GioiTinh = value;
+					this.SendPropertyChanged("GioiTinh");
+					this.OnGioiTinhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgaySinh", DbType="Date")]
+		public System.Nullable<System.DateTime> NgaySinh
+		{
+			get
+			{
+				return this._NgaySinh;
+			}
+			set
+			{
+				if ((this._NgaySinh != value))
+				{
+					this.OnNgaySinhChanging(value);
+					this.SendPropertyChanging();
+					this._NgaySinh = value;
+					this.SendPropertyChanged("NgaySinh");
+					this.OnNgaySinhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Lop", DbType="VarChar(20)")]
+		public string Lop
+		{
+			get
+			{
+				return this._Lop;
+			}
+			set
+			{
+				if ((this._Lop != value))
+				{
+					if (this._LopHoc.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnLopChanging(value);
+					this.SendPropertyChanging();
+					this._Lop = value;
+					this.SendPropertyChanged("Lop");
+					this.OnLopChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LopHoc_SinhVien", Storage="_LopHoc", ThisKey="Lop", OtherKey="MaLop", IsForeignKey=true)]
+		public LopHoc LopHoc
+		{
+			get
+			{
+				return this._LopHoc.Entity;
+			}
+			set
+			{
+				LopHoc previousValue = this._LopHoc.Entity;
+				if (((previousValue != value) 
+							|| (this._LopHoc.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._LopHoc.Entity = null;
+						previousValue.SinhViens.Remove(this);
+					}
+					this._LopHoc.Entity = value;
+					if ((value != null))
+					{
+						value.SinhViens.Add(this);
+						this._Lop = value.MaLop;
+					}
+					else
+					{
+						this._Lop = default(string);
+					}
+					this.SendPropertyChanged("LopHoc");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -188,7 +387,7 @@ namespace WindowsFormsApp1
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LopHoc_SinhVien", Storage="_SinhViens", ThisKey="MaLop", OtherKey="MaLop")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LopHoc_SinhVien", Storage="_SinhViens", ThisKey="MaLop", OtherKey="Lop")]
 		public EntitySet<SinhVien> SinhViens
 		{
 			get
@@ -343,181 +542,6 @@ namespace WindowsFormsApp1
 					this._Password = value;
 					this.SendPropertyChanged("Password");
 					this.OnPasswordChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SinhVien")]
-	public partial class SinhVien : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _MaSV;
-		
-		private string _TenSV;
-		
-		private System.Nullable<System.DateTime> _NgaySinh;
-		
-		private string _MaLop;
-		
-		private EntityRef<LopHoc> _LopHoc;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaSVChanging(string value);
-    partial void OnMaSVChanged();
-    partial void OnTenSVChanging(string value);
-    partial void OnTenSVChanged();
-    partial void OnNgaySinhChanging(System.Nullable<System.DateTime> value);
-    partial void OnNgaySinhChanged();
-    partial void OnMaLopChanging(string value);
-    partial void OnMaLopChanged();
-    #endregion
-		
-		public SinhVien()
-		{
-			this._LopHoc = default(EntityRef<LopHoc>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSV", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaSV
-		{
-			get
-			{
-				return this._MaSV;
-			}
-			set
-			{
-				if ((this._MaSV != value))
-				{
-					this.OnMaSVChanging(value);
-					this.SendPropertyChanging();
-					this._MaSV = value;
-					this.SendPropertyChanged("MaSV");
-					this.OnMaSVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSV", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string TenSV
-		{
-			get
-			{
-				return this._TenSV;
-			}
-			set
-			{
-				if ((this._TenSV != value))
-				{
-					this.OnTenSVChanging(value);
-					this.SendPropertyChanging();
-					this._TenSV = value;
-					this.SendPropertyChanged("TenSV");
-					this.OnTenSVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgaySinh", DbType="Date")]
-		public System.Nullable<System.DateTime> NgaySinh
-		{
-			get
-			{
-				return this._NgaySinh;
-			}
-			set
-			{
-				if ((this._NgaySinh != value))
-				{
-					this.OnNgaySinhChanging(value);
-					this.SendPropertyChanging();
-					this._NgaySinh = value;
-					this.SendPropertyChanged("NgaySinh");
-					this.OnNgaySinhChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLop", DbType="VarChar(20)")]
-		public string MaLop
-		{
-			get
-			{
-				return this._MaLop;
-			}
-			set
-			{
-				if ((this._MaLop != value))
-				{
-					if (this._LopHoc.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMaLopChanging(value);
-					this.SendPropertyChanging();
-					this._MaLop = value;
-					this.SendPropertyChanged("MaLop");
-					this.OnMaLopChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LopHoc_SinhVien", Storage="_LopHoc", ThisKey="MaLop", OtherKey="MaLop", IsForeignKey=true)]
-		public LopHoc LopHoc
-		{
-			get
-			{
-				return this._LopHoc.Entity;
-			}
-			set
-			{
-				LopHoc previousValue = this._LopHoc.Entity;
-				if (((previousValue != value) 
-							|| (this._LopHoc.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._LopHoc.Entity = null;
-						previousValue.SinhViens.Remove(this);
-					}
-					this._LopHoc.Entity = value;
-					if ((value != null))
-					{
-						value.SinhViens.Add(this);
-						this._MaLop = value.MaLop;
-					}
-					else
-					{
-						this._MaLop = default(string);
-					}
-					this.SendPropertyChanged("LopHoc");
 				}
 			}
 		}

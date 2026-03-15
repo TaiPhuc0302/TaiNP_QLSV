@@ -37,11 +37,22 @@ namespace WindowsFormsApp1.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DAT-LAPTOP\\SQLEXPRESS;Initial Catalog=QuanLySinhVienDB;Persist Securi" +
-            "ty Info=True;User ID=dat;Password=tuongdatta_2005;TrustServerCertificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SONO5FV;Initial Catalog=QuanLySinhVienDB;Persist Security Inf" +
+            "o=True;User ID=sa;Password=Tai@03022005;TrustServerCertificate=True")]
         public string QuanLySinhVienDBConnectionString {
             get {
                 return ((string)(this["QuanLySinhVienDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SONO5FV;Initial Catalog=QuanLySinhVienDB;Integrated Security=" +
+            "True;TrustServerCertificate=True")]
+        public string QuanLySinhVienDBConnectionString1 {
+            get {
+                return ((string)(this["QuanLySinhVienDBConnectionString1"]));
             }
         }
     }

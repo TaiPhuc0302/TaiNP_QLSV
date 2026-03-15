@@ -28,124 +28,246 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_QLLH));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.link_QLLH = new System.Windows.Forms.LinkLabel();
-            this.link_QLSV = new System.Windows.Forms.LinkLabel();
-            this.dgv_DSLH = new System.Windows.Forms.DataGridView();
-            this.pnl_function = new System.Windows.Forms.Panel();
-            this.txt_SearchSV = new System.Windows.Forms.TextBox();
-            this.ptb_Search = new System.Windows.Forms.PictureBox();
+            this.txb_siSo = new System.Windows.Forms.TextBox();
+            this.lbl_siSo = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_them = new System.Windows.Forms.Button();
+            this.btn_LamMoi = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
-            this.btn_them = new System.Windows.Forms.Button();
-            this.pnl_topBar = new System.Windows.Forms.Panel();
-            this.link_Home = new System.Windows.Forms.LinkLabel();
-            this.ptb_avatar = new System.Windows.Forms.PictureBox();
+            this.btn_QLSV = new System.Windows.Forms.Button();
+            this.txb_tenLop = new System.Windows.Forms.TextBox();
+            this.txb_maLophoc = new System.Windows.Forms.TextBox();
+            this.lbl_tenLop = new System.Windows.Forms.Label();
+            this.lbl_maLophoc = new System.Windows.Forms.Label();
+            this.lbl_thongtinLop = new System.Windows.Forms.Label();
+            this.dgv_DSLH = new System.Windows.Forms.DataGridView();
+            this.pnl_function = new System.Windows.Forms.Panel();
+            this.txb_SearchLH = new System.Windows.Forms.TextBox();
+            this.ptb_Search = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSLH)).BeginInit();
             this.pnl_function.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Search)).BeginInit();
-            this.pnl_topBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 50);
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.SeaShell;
-            this.splitContainer1.Panel1.Controls.Add(this.link_QLLH);
-            this.splitContainer1.Panel1.Controls.Add(this.link_QLSV);
-            this.splitContainer1.Panel1.Controls.Add(this.btn_Xoa);
-            this.splitContainer1.Panel1.Controls.Add(this.btn_them);
-            this.splitContainer1.Panel1.Controls.Add(this.btn_Sua);
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Snow;
+            this.splitContainer1.Panel1.Controls.Add(this.txb_siSo);
+            this.splitContainer1.Panel1.Controls.Add(this.lbl_siSo);
+            this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_QLSV);
+            this.splitContainer1.Panel1.Controls.Add(this.txb_tenLop);
+            this.splitContainer1.Panel1.Controls.Add(this.txb_maLophoc);
+            this.splitContainer1.Panel1.Controls.Add(this.lbl_tenLop);
+            this.splitContainer1.Panel1.Controls.Add(this.lbl_maLophoc);
+            this.splitContainer1.Panel1.Controls.Add(this.lbl_thongtinLop);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgv_DSLH);
             this.splitContainer1.Panel2.Controls.Add(this.pnl_function);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 400);
-            this.splitContainer1.SplitterDistance = 203;
-            this.splitContainer1.TabIndex = 3;
+            this.splitContainer1.Size = new System.Drawing.Size(928, 667);
+            this.splitContainer1.SplitterDistance = 307;
+            this.splitContainer1.TabIndex = 2;
             // 
-            // link_QLLH
+            // txb_siSo
             // 
-            this.link_QLLH.ActiveLinkColor = System.Drawing.Color.LightGray;
-            this.link_QLLH.LinkArea = new System.Windows.Forms.LinkArea(0, 15);
-            this.link_QLLH.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.link_QLLH.LinkColor = System.Drawing.Color.Black;
-            this.link_QLLH.Location = new System.Drawing.Point(0, 52);
-            this.link_QLLH.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            this.link_QLLH.Name = "link_QLLH";
-            this.link_QLLH.Size = new System.Drawing.Size(203, 25);
-            this.link_QLLH.TabIndex = 1;
-            this.link_QLLH.TabStop = true;
-            this.link_QLLH.Text = "Quản lý Lớp học";
-            this.link_QLLH.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_QLLH_LinkClicked);
+            this.txb_siSo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txb_siSo.Location = new System.Drawing.Point(9, 229);
+            this.txb_siSo.Name = "txb_siSo";
+            this.txb_siSo.Size = new System.Drawing.Size(283, 26);
+            this.txb_siSo.TabIndex = 20;
             // 
-            // link_QLSV
+            // lbl_siSo
             // 
-            this.link_QLSV.ActiveLinkColor = System.Drawing.Color.LightGray;
-            this.link_QLSV.LinkArea = new System.Windows.Forms.LinkArea(0, 17);
-            this.link_QLSV.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.link_QLSV.LinkColor = System.Drawing.Color.Black;
-            this.link_QLSV.Location = new System.Drawing.Point(0, 6);
-            this.link_QLSV.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            this.link_QLSV.Name = "link_QLSV";
-            this.link_QLSV.Size = new System.Drawing.Size(203, 26);
-            this.link_QLSV.TabIndex = 0;
-            this.link_QLSV.TabStop = true;
-            this.link_QLSV.Text = "Quản lý Sinh viên";
-            this.link_QLSV.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_QLSV_LinkClicked);
+            this.lbl_siSo.AutoSize = true;
+            this.lbl_siSo.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_siSo.Location = new System.Drawing.Point(7, 201);
+            this.lbl_siSo.Name = "lbl_siSo";
+            this.lbl_siSo.Size = new System.Drawing.Size(59, 25);
+            this.lbl_siSo.TabIndex = 19;
+            this.lbl_siSo.Text = "Sĩ Số";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btn_them, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_LamMoi, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Xoa, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Sua, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 474);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(282, 100);
+            this.tableLayoutPanel1.TabIndex = 18;
+            // 
+            // btn_them
+            // 
+            this.btn_them.BackColor = System.Drawing.Color.Lime;
+            this.btn_them.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_them.Location = new System.Drawing.Point(3, 3);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(135, 44);
+            this.btn_them.TabIndex = 1;
+            this.btn_them.Text = "Thêm";
+            this.btn_them.UseVisualStyleBackColor = false;
+            this.btn_them.Click += new System.EventHandler(this.btn_Them_Click);
+            // 
+            // btn_LamMoi
+            // 
+            this.btn_LamMoi.BackColor = System.Drawing.Color.LightGray;
+            this.btn_LamMoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_LamMoi.Location = new System.Drawing.Point(144, 53);
+            this.btn_LamMoi.Name = "btn_LamMoi";
+            this.btn_LamMoi.Size = new System.Drawing.Size(135, 44);
+            this.btn_LamMoi.TabIndex = 15;
+            this.btn_LamMoi.Text = "Làm mới";
+            this.btn_LamMoi.UseVisualStyleBackColor = false;
+            this.btn_LamMoi.Click += new System.EventHandler(this.btn_LamMoi_Click);
+            // 
+            // btn_Xoa
+            // 
+            this.btn_Xoa.BackColor = System.Drawing.Color.Firebrick;
+            this.btn_Xoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Xoa.Location = new System.Drawing.Point(3, 53);
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.Size = new System.Drawing.Size(135, 44);
+            this.btn_Xoa.TabIndex = 3;
+            this.btn_Xoa.Text = "Xoá";
+            this.btn_Xoa.UseVisualStyleBackColor = false;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
+            // 
+            // btn_Sua
+            // 
+            this.btn_Sua.BackColor = System.Drawing.Color.Yellow;
+            this.btn_Sua.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Sua.Location = new System.Drawing.Point(144, 3);
+            this.btn_Sua.Name = "btn_Sua";
+            this.btn_Sua.Size = new System.Drawing.Size(135, 44);
+            this.btn_Sua.TabIndex = 2;
+            this.btn_Sua.Text = "Sửa";
+            this.btn_Sua.UseVisualStyleBackColor = false;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
+            // 
+            // btn_QLSV
+            // 
+            this.btn_QLSV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_QLSV.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_QLSV.Location = new System.Drawing.Point(9, 580);
+            this.btn_QLSV.Name = "btn_QLSV";
+            this.btn_QLSV.Size = new System.Drawing.Size(282, 50);
+            this.btn_QLSV.TabIndex = 16;
+            this.btn_QLSV.Text = "Quản lý Sinh viên";
+            this.btn_QLSV.UseVisualStyleBackColor = false;
+            // 
+            // txb_tenLop
+            // 
+            this.txb_tenLop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txb_tenLop.Location = new System.Drawing.Point(9, 157);
+            this.txb_tenLop.Name = "txb_tenLop";
+            this.txb_tenLop.Size = new System.Drawing.Size(283, 26);
+            this.txb_tenLop.TabIndex = 10;
+            // 
+            // txb_maLophoc
+            // 
+            this.txb_maLophoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txb_maLophoc.Location = new System.Drawing.Point(9, 83);
+            this.txb_maLophoc.Name = "txb_maLophoc";
+            this.txb_maLophoc.Size = new System.Drawing.Size(283, 26);
+            this.txb_maLophoc.TabIndex = 12;
+            // 
+            // lbl_tenLop
+            // 
+            this.lbl_tenLop.AutoSize = true;
+            this.lbl_tenLop.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tenLop.Location = new System.Drawing.Point(7, 129);
+            this.lbl_tenLop.Name = "lbl_tenLop";
+            this.lbl_tenLop.Size = new System.Drawing.Size(87, 25);
+            this.lbl_tenLop.TabIndex = 7;
+            this.lbl_tenLop.Text = "Tên Lớp";
+            // 
+            // lbl_maLophoc
+            // 
+            this.lbl_maLophoc.AutoSize = true;
+            this.lbl_maLophoc.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_maLophoc.Location = new System.Drawing.Point(7, 55);
+            this.lbl_maLophoc.Name = "lbl_maLophoc";
+            this.lbl_maLophoc.Size = new System.Drawing.Size(119, 25);
+            this.lbl_maLophoc.TabIndex = 8;
+            this.lbl_maLophoc.Text = "Mã Lớp học";
+            // 
+            // lbl_thongtinLop
+            // 
+            this.lbl_thongtinLop.AutoSize = true;
+            this.lbl_thongtinLop.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_thongtinLop.Location = new System.Drawing.Point(12, 9);
+            this.lbl_thongtinLop.Name = "lbl_thongtinLop";
+            this.lbl_thongtinLop.Size = new System.Drawing.Size(174, 32);
+            this.lbl_thongtinLop.TabIndex = 9;
+            this.lbl_thongtinLop.Text = "Thông tin Lớp";
+            this.lbl_thongtinLop.Click += new System.EventHandler(this.lbl_thongtinLop_Click);
             // 
             // dgv_DSLH
             // 
             this.dgv_DSLH.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv_DSLH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DSLH.Location = new System.Drawing.Point(4, 58);
+            this.dgv_DSLH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_DSLH.Location = new System.Drawing.Point(0, 52);
             this.dgv_DSLH.Name = "dgv_DSLH";
             this.dgv_DSLH.RowHeadersWidth = 62;
             this.dgv_DSLH.RowTemplate.Height = 28;
-            this.dgv_DSLH.Size = new System.Drawing.Size(593, 348);
+            this.dgv_DSLH.Size = new System.Drawing.Size(617, 615);
             this.dgv_DSLH.TabIndex = 1;
             // 
             // pnl_function
             // 
-            this.pnl_function.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.pnl_function.Controls.Add(this.txt_SearchSV);
+            this.pnl_function.BackColor = System.Drawing.Color.Snow;
+            this.pnl_function.Controls.Add(this.txb_SearchLH);
             this.pnl_function.Controls.Add(this.ptb_Search);
             this.pnl_function.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_function.Location = new System.Drawing.Point(0, 0);
             this.pnl_function.Name = "pnl_function";
-            this.pnl_function.Size = new System.Drawing.Size(593, 52);
+            this.pnl_function.Size = new System.Drawing.Size(617, 52);
             this.pnl_function.TabIndex = 0;
             // 
-            // txt_SearchSV
+            // txb_SearchLH
             // 
-            this.txt_SearchSV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_SearchSV.Location = new System.Drawing.Point(130, 16);
-            this.txt_SearchSV.Margin = new System.Windows.Forms.Padding(0);
-            this.txt_SearchSV.Name = "txt_SearchSV";
-            this.txt_SearchSV.Size = new System.Drawing.Size(267, 26);
-            this.txt_SearchSV.TabIndex = 0;
+            this.txb_SearchLH.Location = new System.Drawing.Point(17, 12);
+            this.txb_SearchLH.Margin = new System.Windows.Forms.Padding(0);
+            this.txb_SearchLH.Name = "txb_SearchLH";
+            this.txb_SearchLH.Size = new System.Drawing.Size(341, 26);
+            this.txb_SearchLH.TabIndex = 0;
             // 
             // ptb_Search
             // 
-            this.ptb_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.ptb_Search.BackColor = System.Drawing.Color.Transparent;
             this.ptb_Search.Image = global::WindowsFormsApp1.Properties.Resources.loupe;
-            this.ptb_Search.Location = new System.Drawing.Point(427, 12);
+            this.ptb_Search.Location = new System.Drawing.Point(358, 12);
             this.ptb_Search.Margin = new System.Windows.Forms.Padding(0);
             this.ptb_Search.Name = "ptb_Search";
             this.ptb_Search.Size = new System.Drawing.Size(51, 30);
@@ -153,96 +275,24 @@
             this.ptb_Search.TabIndex = 0;
             this.ptb_Search.TabStop = false;
             // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Xoa.Location = new System.Drawing.Point(59, 336);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(59, 30);
-            this.btn_Xoa.TabIndex = 3;
-            this.btn_Xoa.Text = "Xoá";
-            this.btn_Xoa.UseVisualStyleBackColor = true;
-            // 
-            // btn_Sua
-            // 
-            this.btn_Sua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Sua.Location = new System.Drawing.Point(107, 291);
-            this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(59, 30);
-            this.btn_Sua.TabIndex = 2;
-            this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.UseVisualStyleBackColor = true;
-            // 
-            // btn_them
-            // 
-            this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_them.Location = new System.Drawing.Point(12, 291);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(67, 30);
-            this.btn_them.TabIndex = 1;
-            this.btn_them.Text = "Thêm";
-            this.btn_them.UseVisualStyleBackColor = true;
-            // 
-            // pnl_topBar
-            // 
-            this.pnl_topBar.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.pnl_topBar.Controls.Add(this.link_Home);
-            this.pnl_topBar.Controls.Add(this.ptb_avatar);
-            this.pnl_topBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_topBar.Location = new System.Drawing.Point(0, 0);
-            this.pnl_topBar.Name = "pnl_topBar";
-            this.pnl_topBar.Size = new System.Drawing.Size(800, 50);
-            this.pnl_topBar.TabIndex = 2;
-            // 
-            // link_Home
-            // 
-            this.link_Home.ActiveLinkColor = System.Drawing.Color.Transparent;
-            this.link_Home.AutoSize = true;
-            this.link_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.link_Home.LinkArea = new System.Windows.Forms.LinkArea(0, 9);
-            this.link_Home.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.link_Home.LinkColor = System.Drawing.Color.Black;
-            this.link_Home.Location = new System.Drawing.Point(3, 9);
-            this.link_Home.Name = "link_Home";
-            this.link_Home.Size = new System.Drawing.Size(163, 37);
-            this.link_Home.TabIndex = 1;
-            this.link_Home.TabStop = true;
-            this.link_Home.Text = "Trang chủ";
-            this.link_Home.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_Home_LinkClicked);
-            // 
-            // ptb_avatar
-            // 
-            this.ptb_avatar.Image = ((System.Drawing.Image)(resources.GetObject("ptb_avatar.Image")));
-            this.ptb_avatar.Location = new System.Drawing.Point(675, 0);
-            this.ptb_avatar.Name = "ptb_avatar";
-            this.ptb_avatar.Size = new System.Drawing.Size(100, 50);
-            this.ptb_avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptb_avatar.TabIndex = 0;
-            this.ptb_avatar.TabStop = false;
-            // 
             // frm_QLLH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(928, 667);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.pnl_topBar);
             this.Name = "frm_QLLH";
             this.Text = "frm_QLLH";
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSLH)).EndInit();
             this.pnl_function.ResumeLayout(false);
             this.pnl_function.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Search)).EndInit();
-            this.pnl_topBar.ResumeLayout(false);
-            this.pnl_topBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_avatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,17 +300,22 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.LinkLabel link_QLLH;
-        private System.Windows.Forms.LinkLabel link_QLSV;
-        private System.Windows.Forms.DataGridView dgv_DSLH;
-        private System.Windows.Forms.Panel pnl_function;
-        private System.Windows.Forms.TextBox txt_SearchSV;
-        private System.Windows.Forms.PictureBox ptb_Search;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btn_them;
+        private System.Windows.Forms.Button btn_LamMoi;
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Sua;
-        private System.Windows.Forms.Button btn_them;
-        private System.Windows.Forms.Panel pnl_topBar;
-        private System.Windows.Forms.LinkLabel link_Home;
-        private System.Windows.Forms.PictureBox ptb_avatar;
+        private System.Windows.Forms.Button btn_QLSV;
+        private System.Windows.Forms.TextBox txb_tenLop;
+        private System.Windows.Forms.TextBox txb_maLophoc;
+        private System.Windows.Forms.Label lbl_tenLop;
+        private System.Windows.Forms.Label lbl_maLophoc;
+        private System.Windows.Forms.Label lbl_thongtinLop;
+        private System.Windows.Forms.DataGridView dgv_DSLH;
+        private System.Windows.Forms.Panel pnl_function;
+        private System.Windows.Forms.TextBox txb_SearchLH;
+        private System.Windows.Forms.PictureBox ptb_Search;
+        private System.Windows.Forms.TextBox txb_siSo;
+        private System.Windows.Forms.Label lbl_siSo;
     }
 }
