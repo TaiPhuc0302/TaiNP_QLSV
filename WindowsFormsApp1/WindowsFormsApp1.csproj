@@ -58,6 +58,9 @@
     <Compile Include="frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_QLLH.cs">
       <SubType>Form</SubType>
     </Compile>

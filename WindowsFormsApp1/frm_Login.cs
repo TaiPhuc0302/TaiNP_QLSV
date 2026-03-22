@@ -27,8 +27,9 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Login successful!");
                 this.Hide();
-                frm_QLSV frm = new frm_QLSV();
-                frm.Show();
+                frm_Menu menu = new frm_Menu();
+                menu.ShowDialog();
+                this.Close();
             }
             else
             {

@@ -37,6 +37,7 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_QLSV = new System.Windows.Forms.Button();
+            this.btn_XemSV = new System.Windows.Forms.Button();
             this.txb_tenLop = new System.Windows.Forms.TextBox();
             this.txb_maLophoc = new System.Windows.Forms.TextBox();
             this.lbl_tenLop = new System.Windows.Forms.Label();
@@ -75,6 +76,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.lbl_tenLop);
             this.splitContainer1.Panel1.Controls.Add(this.lbl_maLophoc);
             this.splitContainer1.Panel1.Controls.Add(this.lbl_thongtinLop);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_XemSV);
             // 
             // splitContainer1.Panel2
             // 
@@ -182,6 +184,19 @@
             this.btn_QLSV.Text = "Quản lý Sinh viên";
             this.btn_QLSV.UseVisualStyleBackColor = false;
             this.btn_QLSV.Click += new System.EventHandler(this.btn_QLSV_Click);
+            //
+            // btn_XemSV
+            //
+            this.btn_XemSV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_XemSV.BackColor = System.Drawing.Color.MediumPurple;
+            this.btn_XemSV.Location = new System.Drawing.Point(9, 640);
+            this.btn_XemSV.Name = "btn_XemSV";
+            this.btn_XemSV.Size = new System.Drawing.Size(282, 40);
+            this.btn_XemSV.TabIndex = 21;
+            this.btn_XemSV.Text = "Xem DS Sinh viên theo lớp";
+            this.btn_XemSV.UseVisualStyleBackColor = false;
+            this.btn_XemSV.Click += new System.EventHandler(this.btn_XemSV_Click);
             // 
             // txb_tenLop
             // 
@@ -319,5 +334,6 @@
         private System.Windows.Forms.PictureBox ptb_Search;
         private System.Windows.Forms.TextBox txb_siSo;
         private System.Windows.Forms.Label lbl_siSo;
+        private System.Windows.Forms.Button btn_XemSV;
     }
 }

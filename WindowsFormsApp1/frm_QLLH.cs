@@ -155,6 +155,20 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void btn_XemSV_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txb_maLophoc.Text))
+            {
+                MessageBox.Show("Vui lòng chọn lớp!");
+                return;
+            }
+
+            string maLop = txb_maLophoc.Text;
+            frm_QLSV f = new frm_QLSV();
+            f.MaLop = maLop;
+            f.Show();
+        }
+
         private void ptb_Search_Click(object sender, EventArgs e)
         {
             string keyword = txb_SearchLH.Text.Trim();

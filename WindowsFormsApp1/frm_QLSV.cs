@@ -14,6 +14,8 @@ namespace WindowsFormsApp1
     public partial class frm_QLSV : Form
     {
         DataBaseDataContext db = new DataBaseDataContext();
+        // mới
+        public string MaLop { get; set; }
         public frm_QLSV()
         {
             InitializeComponent();
@@ -58,7 +60,10 @@ namespace WindowsFormsApp1
                             lh.TenLop,
                             sv.Lop
                         };
-
+            if (!string.IsNullOrEmpty(MaLop))
+            {
+                query = query.Where(x => x.Lop == MaLop);
+            }
             dgv_DSSV.DataSource = query.ToList();
 
             if (dgv_DSSV.Columns.Contains("Lop"))

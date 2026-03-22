@@ -1,4 +1,4 @@
-﻿CREATE DATABASE QuanLySinhVienDB;
+CREATE DATABASE QuanLySinhVienDB;
 GO
 USE QuanLySinhVienDB;
 GO
